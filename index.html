@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <title>UniverseOfUniverse</title>
+        <script src="backbone.js"></script>
+        <link rel="stylesheet" href="estilos1.css">
+    </head>
+    <body class="fondoEspacio">
+        <script lang="JavaScript">
+            //proyecto final sobre el universo
+            var ban=0;
+            var nombre="" ;   
+            var contraseña1="";
+            var contraseña2="";
+            nombre=prompt("Hola desconocido, ingresa tu nombre para empezar esta experiencia:","");
+            do{
+            contraseña1=prompt("Muchos gusto "+nombre+"\n Ahora ingresa tu contraseña (SOLO TEXTO):","");
+            contraseña2=prompt("Confirma tu contraseña porfavor (SOLO TEXTO):","");
+    
+            if(contraseña1 == contraseña2){
+                alert("Muy bien, tu contraseña tiene "+contraseña1.length+" caracteres \n Con esto terminamos el proceso de registro, bienvenido a UniverseOfUniverse");//Uso de .length
+                ban=1;
+            }
+            else{
+            alert("Contraseña incorrecta, vuelva a escribirla de nuevo");
+            }
+            }while(ban==0);
+
+
+            Event.stopListening = function(nombre, ban, contraseña1, contraseña2){//uso de la libreria backbone.js
+                var listeningTo = this._listeningTo;
+                if(!listeningTo) return this;
+            }
+
+            function img(){
+                confirm("Las imagenes no me pertenecen");//uso de onclick
+            }
+
+            function quees(){//uso de onmousedown
+                alert("UniverseOfUniverse es un proyecto escolar que consiste en una pagina web donde se habla de 10 curiosiades del universo con el objetivo de poner en practica algunas herramientas, objectos, funciones etc... de JavaScript para la materia Desarrolla de Aplicaciones Web del lado del Cliente");
+            }
+        </script>
+    <div class="medio">
+        <p align="center" id="base" onmouseup=""><br><br><marquee behavior="Alternate" scrollamount="15">10 Curiosidades sobre el universo</marquee></p>
+        <br>
+        <br>
+        <div align="center">
+        <input type="button" onmousedown="quees();" value="¿Qué es UniverseOfUniverse?">
+        <br>
+        <br>
+        </div>
+        <ul class="lista">
+            <li>1. Las partículas que componen los anillos de Saturno giran a una velocidad de 48 000 km/h, 15 veces más rápido que una bala.</li>
+            <br>
+            <div align="center">
+                <img src="1.jpg" onclick="img()">
+            </div> 
+            <br><br>
+            <li>2. Un día en Venus es más largo que un año en la tierra.</li>
+            <br><br>
+            <li>3. Marte posee el Monte Olimpo, que es el volcán más grande del sistema solar.</li>
+            <br>
+            <div align="center">
+                <img src="2.jpg" onclick="img()">
+            </div>
+            <br><br>
+            <li>4. Cuando miramos al cielo por la noche, en realidad estamos echando un vistazo al pasado. Porque la mayoría de las estrellas están a millones de años luz de la Tierra. La luz de esas estrellas tarda mucho en llegar a nuestro planeta, es probable que veamos estrellas que ya murieron hace mucho tiempo.</li>
+            <br><br>
+            <li>5. Júpiter es tan grande que podrían caber todos los planetas del sistema solar dentro de él.</li>
+            <br>
+            <div align="center">
+                <img src="3.png" onclick="img()">
+            </div> 
+            <br><br>
+            <li>6. El Sol es el 99% de la masa total del sistema solar.</li>
+            <br><br>
+            <li>7. En nuestra galaxia, aproximadamente a 41 años luz de la Tierra se encuentra un planeta formado de diamante llamado 55 Cancri e. Su tamaño es 2 veces mayor al de la Tierra y está cubierto de grafito y diamante.</li>
+            <br>
+            <div align="center">
+                <img src="4.jpg" onclick="img()">
+            </div> 
+            <br><br>
+            <li>8. Si se pudiera comprimir a la tierra al tamaño de una canica, se convertiría en un agujero negro.</li>
+            <br><br>
+            <li>9. La Vía Láctea se mueve en su órbita a 965 mil km/h. Y su lapso de rotación es de 200 millones de años.</li>
+            <br>
+            <div align="center">                                
+                <img src="5.jpg" onclick="img()">
+            </div> 
+            <br><br>
+            <li>10. Según los astronautas, el espacio huele a carne quemada, metal caliente, y humo de soldadura.</li>
+        </ul>
+        <br>
+        <br>
+        <div align="center">
+        <form name="Sugerencias" action="mailto:aldagl733@gmail.com" onSubmit="alert('Opinion enviada'); return false;"><!--Uso de OnSubmit-->
+            <p><h3>Sugerencias para mejorar la pagina:</h3> <br> <textarea name="opinión" rows="20" cols="80">Tu opinión</textarea></p>
+            <input type="submit" value="Enviar sugerencias" name="Enviar">
+            <input type="reset" value="Limpiar">
+        </form>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div align="center" id="base">
+            <h4>Contactos:</h4>
+            <br>
+            <h6>Desarrollado por: : <abbr title="aldagl733@gmail.com"><a href="mailto:aldagl733@gmail.com">Equipo de Backbone</a></abbr></h6>
+            <h6>Fecha de desarrollo: 31 de mayo del 2020</h6>
+        </div>
+    </div>
+    </body>
+</html>
